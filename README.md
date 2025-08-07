@@ -11,7 +11,13 @@ Project to predict titanic survivors based off Kaggle data.
 * Options are to analyze the data or train the model
   * After training performance is analyzed
 
-### Training Notes
+### Training Notes~~~~
 * Feature scaling and encodings
-  * Sex and Pclass features to be hot encoded
+  * Sex, parch, sibs, embarked and Pclass features to be hot encoded
   * Age to be min max scaled/normalized, bell curve distribution
+  * Fare to be transformed via log and min maxed
+    * Left leaning heavy tail
+* Feature notes
+  * Fare cost of 0 is strongly correlated to survival only 1/15 survived with 0 cost Fare
+  * 30% survival for null cabins vs 66.7% survival for ones with a cabin number
+  * 
