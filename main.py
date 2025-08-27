@@ -5,7 +5,7 @@ import pandas as pd
 trn_data = pd.read_csv('./Data/train.csv')
 
 analyzer = Analyzer(trn_data)
-model = Model()
+model = Model(trn_data)
 
 user_input = None
 valid_user_input = {'1': analyzer.analyze_data, '2': model.train_model}
